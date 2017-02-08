@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var CurrencyNameLabel: UILabel!
+    @IBOutlet weak var ValueInputField: UITextField!
+    @IBOutlet weak var BaseCurrencySelector: UISegmentedControl!
+    @IBOutlet weak var SecondaryCurrencySelector: UISegmentedControl!
     @IBOutlet weak var BorderView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +28,6 @@ class ViewController: UIViewController {
         BorderView.layer.shadowRadius = 10.0
         BorderView.layer.shadowOpacity = 1.0
         
-        Currency.GetExchangeRate(base: "USD", currency: "GBP")
     }
 
     override func didReceiveMemoryWarning() {

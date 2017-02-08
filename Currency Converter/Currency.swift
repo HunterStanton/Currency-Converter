@@ -64,6 +64,15 @@ class Currency
         return json["rates"]["\(currency)"].floatValue
     }
     
+    static func ConvertCurrency(currency1: String, currency2: String, value: Float) -> Float
+    {
+        // Grab the exchange rate
+        let rate: Float = GetExchangeRate(base: currency1, currency: currency2)
+        
+        // Multiply rate * value to get the amount of currency2 that currency1 could buy
+        return rate * value
+    }
+    
     
     /// Wait
     /// Wait the specified time interval before continuing execution.
