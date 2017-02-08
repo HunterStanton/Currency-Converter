@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var BorderView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set up UI stuff
         BorderView.backgroundColor = UIColor(white: 1.0, alpha: 0.9)
         BorderView.layer.borderWidth = 5.0
         BorderView.layer.cornerRadius = 10.0
@@ -26,6 +28,24 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+    func checkInterfaceStyle() -> String{
+        guard(traitCollection.responds(to: #selector(getter: UITraitCollection.userInterfaceStyle)))
+            else { return "1" }
+        
+        let style = traitCollection.userInterfaceStyle
+        
+        switch style {
+        case .light:
+            return("light")
+        case .dark:
+            return("dark")
+        case .unspecified:
+            return("unspecified")
+        }
     }
 
 
