@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         BorderView.layer.shadowOffset = CGSize.zero
         BorderView.layer.shadowRadius = 10.0
         BorderView.layer.shadowOpacity = 1.0
+        
+        Currency.GetExchangeRate(base: "USD", currency: "GBP")
     }
 
     override func didReceiveMemoryWarning() {
