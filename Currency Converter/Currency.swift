@@ -64,6 +64,14 @@ class Currency
         return json["rates"]["\(currency)"].floatValue
     }
     
+    
+    /// Gets the amount of currency that another currency could buy.
+    ///
+    /// - Parameters:
+    ///   - currency1: The first currency.
+    ///   - currency2: The second currency.
+    ///   - value: The amount of the first currency.
+    /// - Returns: The amount of the second currency that the first currency could buy.
     static func ConvertCurrency(currency1: String, currency2: String, value: Float) -> Float
     {
         // Grab the exchange rate
