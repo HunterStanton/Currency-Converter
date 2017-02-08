@@ -30,7 +30,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lcs-UQ-BXp">
                                         <rect key="frame" x="28" y="43" width="944" height="70"/>
@@ -64,6 +64,9 @@
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="38"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                         <state key="normal" title="Convert"/>
+                                        <connections>
+                                            <action selector="ConvertButtonPressed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="HgZ-KU-Y7Z"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="125" translatesAutoresizingMaskIntoConstraints="NO" id="ASw-Wh-vem">
                                         <rect key="frame" x="28" y="362" width="944" height="439"/>
@@ -89,6 +92,7 @@
                         <outlet property="BaseCurrencySelector" destination="Lcs-UQ-BXp" id="zWL-bv-vhi"/>
                         <outlet property="BorderView" destination="0zp-AU-WzJ" id="wWa-Jj-9Da"/>
                         <outlet property="CurrencyNameLabel" destination="3GA-uc-72D" id="AKh-sL-zWT"/>
+                        <outlet property="CurrencyValue" destination="ASw-Wh-vem" id="xH5-TK-dbD"/>
                         <outlet property="SecondaryCurrencySelector" destination="ub3-PF-maI" id="nCM-xU-duB"/>
                         <outlet property="ValueInputField" destination="SlG-m2-tjT" id="hcZ-Za-rb6"/>
                     </connections>

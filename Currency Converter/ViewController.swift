@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var BaseCurrencySelector: UISegmentedControl!
     @IBOutlet weak var SecondaryCurrencySelector: UISegmentedControl!
     @IBOutlet weak var BorderView: UIView!
+    @IBOutlet weak var CurrencyValue: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,7 +37,15 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func ConvertButtonPressed(_ sender: Any)
+    {
+        CurrencyValue.text = String(Currency.ConvertCurrency(currency1: BaseCurrencySelector.selectedSegmentIndex.description, currency2: SecondaryCurrencySelector.selectedSegmentIndex.description, value: 1))
+    }
     
+    
+    /// Gets what UIInterfaceStyle the user has set. Dark or Light depending on AppleTV settings.
+    ///
+    /// - Returns: The interface style the user has set.
     func checkInterfaceStyle() -> String{
         guard(traitCollection.responds(to: #selector(getter: UITraitCollection.userInterfaceStyle)))
             else { return "1" }
