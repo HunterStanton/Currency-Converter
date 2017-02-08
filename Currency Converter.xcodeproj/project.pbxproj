@@ -325,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9987F44531CCC3BA7637E2A1 /* Pods-Currency Converter.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Currency Converter/Info.plist";
@@ -339,6 +340,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A4BA6F0F2F26AC97424CEF7E /* Pods-Currency Converter.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Currency Converter/Info.plist";
@@ -368,6 +370,7 @@
 				7C857AC91E4B5B4600B8211E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
