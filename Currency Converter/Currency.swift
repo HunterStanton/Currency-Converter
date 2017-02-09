@@ -43,6 +43,9 @@ class Currency
         // Grab the exchange rate from the Fixer server and save the JSON response
         if let url = NSURL(string: "https://api.fixer.io/latest?base=\(base)&symbols=\(currency)")
         {
+            // Change the timeouts so the application doesn't hang for a long time if offline
+            URLSession.shared.configuration.timeoutIntervalForRequest = 2
+            URLSession.shared.configuration.timeoutIntervalForResource = 2
             URLSession.shared.dataTask(with: url as URL, completionHandler: { (data, response, error) in
                 if let error = error
                 {
@@ -59,6 +62,7 @@ class Currency
                     {
                         // If nothing was downloaded for some reason, log it
                         print("No data was downloaded.")
+                        locked = false
                     }
                 }
             }).resume()
