@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     
     @IBAction func ConvertButtonPressed(_ sender: Any)
     {
-        CurrencyValue.text = String(Currency.ConvertCurrency(currency1: BaseCurrencySelector.selectedSegmentIndex.description, currency2: SecondaryCurrencySelector.selectedSegmentIndex.description, value: 1))
+        CurrencyValue.text = String(Currency.ConvertCurrency(currency1: BaseCurrencySelector.titleForSegment(at: BaseCurrencySelector.selectedSegmentIndex)!, currency2: SecondaryCurrencySelector.titleForSegment(at: SecondaryCurrencySelector.selectedSegmentIndex)!, value: 1))
     }
     
     
