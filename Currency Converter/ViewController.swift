@@ -39,7 +39,21 @@ class ViewController: UIViewController {
     
     @IBAction func ConvertButtonPressed(_ sender: Any)
     {
-        CurrencyValue.text = String(Currency.ConvertCurrency(currency1: BaseCurrencySelector.titleForSegment(at: BaseCurrencySelector.selectedSegmentIndex)!, currency2: SecondaryCurrencySelector.titleForSegment(at: SecondaryCurrencySelector.selectedSegmentIndex)!, value: 1))
+        
+        // If the rate entered is invalid, make it 0
+        let rate: Float = Float(ValueInputField.text!) ?? 0
+        
+        // If the rate isn't valid, no point actually making the convert call which will waste resources
+        if(rate==0)
+        {
+            print("Invalid rate.")
+            return
+        }
+        
+        // Get the exchange rate
+        CurrencyValue.text = String(Currency.ConvertCurrency(currency1: BaseCurrencySelector.titleForSegment(at: BaseCurrencySelector.selectedSegmentIndex)!, currency2: SecondaryCurrencySelector.titleForSegment(at: SecondaryCurrencySelector.selectedSegmentIndex)!, value: rate))
+        
+        CurrencyNameLabel.text = Currency.currencyNames[SecondaryCurrencySelector.titleForSegment(at: SecondaryCurrencySelector.selectedSegmentIndex)!]
     }
     
     

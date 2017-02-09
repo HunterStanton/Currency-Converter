@@ -15,6 +15,17 @@ import SwiftyJSON
 class Currency
 {
     
+    
+    /// Currency dictionary to hold currency names used for showing the currency name in the UI
+    static let currencyNames: [String:String] = [
+    "USD":"United States Dollars",
+    "GBP":"British Pounds",
+    "EUR":"Euros",
+    "INR":"Indian Rupees",
+    "AUD":"Australian Dollars",
+    "CAD":"Canadian Dollars"]
+    
+    
     /// Gets the current exchange rate between two currencies.
     ///
     /// - Parameters:
@@ -74,11 +85,19 @@ class Currency
     /// - Returns: The amount of the second currency that the first currency could buy.
     static func ConvertCurrency(currency1: String, currency2: String, value: Float) -> Float
     {
+        if(currency1 == currency2)
+        {
+            // User has selected two of the same currencies, and the exchange rate will alwyas be 1.0
+            return 1.0
+        }
+        else
+        {
         // Grab the exchange rate
         let rate: Float = GetExchangeRate(base: currency1, currency: currency2)
         
         // Multiply rate * value to get the amount of currency2 that currency1 could buy
         return rate * value
+        }
     }
     
     
