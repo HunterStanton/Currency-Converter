@@ -35,6 +35,8 @@ class Currency
     static func GetExchangeRate(base: String, currency: String) -> Float
     {
         // A locking variable so this function doesn't return until the value we need is downloaded
+        // Locking isn't really ideal because the UI locks up while this is returning.
+        // TODO: change this
         var locked = true
         
         // The JSON object that will hold our downloaded data
