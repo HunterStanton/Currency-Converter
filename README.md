@@ -13,3 +13,4 @@ I am going to be improving upon these things in future updates:
 - Add more currencies, the API supports far more
 - Add caching support for offline use
 - Eliminate any bugs that may still be hiding and make sure the error handling handles any common issues
+- Add proper multithreading using Grand Central Dispatch. At the moment a locking variable is used which freezes the UI thread until the function completes. This is obviously very bad as the application will lock up until the network request completes, which could never happen.
