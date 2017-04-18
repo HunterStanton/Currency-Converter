@@ -57,13 +57,67 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7C179AF21EA6C8130065A35E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7C857ABD1E4B5B4600B8211E /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7C179AF31EA6C8320065A35E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7C857ACA1E4B68C800B8211E /* Currency.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7C179AF41EA6C83B0065A35E /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				7C857ABB1E4B5B4600B8211E /* AppDelegate.swift */,
+			);
+			name = Delegates;
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		7C179AF51EA6C8430065A35E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				7C857AC41E4B5B4600B8211E /* Info.plist */,
+			);
+			name = Support;
+			path = Support;
+			sourceTree = "<group>";
+		};
+		7C179AF61EA6C84B0065A35E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7C857AC21E4B5B4600B8211E /* Assets.xcassets */,
+			);
+			name = Assets;
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		7C179AF71EA6C8510065A35E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7C857ABF1E4B5B4600B8211E /* Main.storyboard */,
+			);
+			name = Storyboards;
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		7C857AAF1E4B5B4500B8211E = {
 			isa = PBXGroup;
 			children = (
 				7C857ABA1E4B5B4600B8211E /* Currency Converter */,
-				7C857AB91E4B5B4600B8211E /* Products */,
-				54D9E45CD3FC4F233A6E4957 /* Pods */,
 				44C0693DF7EC92645DDD507C /* Frameworks */,
+				54D9E45CD3FC4F233A6E4957 /* Pods */,
+				7C857AB91E4B5B4600B8211E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,12 +132,12 @@
 		7C857ABA1E4B5B4600B8211E /* Currency Converter */ = {
 			isa = PBXGroup;
 			children = (
-				7C857ABB1E4B5B4600B8211E /* AppDelegate.swift */,
-				7C857ABD1E4B5B4600B8211E /* ViewController.swift */,
-				7C857ACA1E4B68C800B8211E /* Currency.swift */,
-				7C857ABF1E4B5B4600B8211E /* Main.storyboard */,
-				7C857AC21E4B5B4600B8211E /* Assets.xcassets */,
-				7C857AC41E4B5B4600B8211E /* Info.plist */,
+				7C179AF61EA6C84B0065A35E /* Assets */,
+				7C179AF31EA6C8320065A35E /* Classes */,
+				7C179AF41EA6C83B0065A35E /* Delegates */,
+				7C179AF71EA6C8510065A35E /* Storyboards */,
+				7C179AF51EA6C8430065A35E /* Support */,
+				7C179AF21EA6C8130065A35E /* View Controllers */,
 			);
 			path = "Currency Converter";
 			sourceTree = "<group>";
@@ -225,6 +279,7 @@
 				7C857AC01E4B5B4600B8211E /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -328,7 +383,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = "Currency Converter/Info.plist";
+				INFOPLIST_FILE = "Currency Converter/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.HunterStanton.Currency-Converter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -343,7 +398,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = "Currency Converter/Info.plist";
+				INFOPLIST_FILE = "Currency Converter/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.HunterStanton.Currency-Converter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
